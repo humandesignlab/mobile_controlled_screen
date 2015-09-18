@@ -1,0 +1,11 @@
+[14-Apr-2015 17:42:16 America/Denver] PHP Notice:  Undefined index: image in /home3/humande2/public_html/sitios/hp/websocket_server_app_save_pic_to_server/inc/savePNG.php on line 2
+[14-Apr-2015 17:42:16 America/Denver] PHP Notice:  Undefined index: filedir in /home3/humande2/public_html/sitios/hp/websocket_server_app_save_pic_to_server/inc/savePNG.php on line 3
+[14-Apr-2015 17:42:16 America/Denver] PHP Warning:  file_put_contents(): Filename cannot be empty in /home3/humande2/public_html/sitios/hp/websocket_server_app_save_pic_to_server/inc/savePNG.php on line 12
+[14-Apr-2015 17:44:27 America/Denver] PHP Notice:  Undefined index: image in /home3/humande2/public_html/sitios/hp/websocket_server_app_save_pic_to_server/inc/savePNG.php on line 2
+[14-Apr-2015 17:44:27 America/Denver] PHP Notice:  Undefined index: filedir in /home3/humande2/public_html/sitios/hp/websocket_server_app_save_pic_to_server/inc/savePNG.php on line 3
+[14-Apr-2015 17:44:27 America/Denver] PHP Warning:  file_put_contents(): Filename cannot be empty in /home3/humande2/public_html/sitios/hp/websocket_server_app_save_pic_to_server/inc/savePNG.php on line 12
+[14-Apr-2015 17:47:38 America/Denver] PHP Warning:  scandir(/path/to/my/directory): failed to open dir: No such file or directory in /home3/humande2/public_html/sitios/hp/websocket_server_app_save_pic_to_server/inc/newestFile.php on line 3
+[14-Apr-2015 17:47:38 America/Denver] PHP Warning:  scandir(): (errno 2): No such file or directory in /home3/humande2/public_html/sitios/hp/websocket_server_app_save_pic_to_server/inc/newestFile.php on line 3
+[14-Apr-2015 17:47:38 America/Denver] PHP Warning:  array_diff(): Argument #1 is not an array in /home3/humande2/public_html/sitios/hp/websocket_server_app_save_pic_to_server/inc/newestFile.php on line 3
+[12-May-2015 17:22:21 America/Denver] PHP Notice:  Undefined index: filedir in /home3/humande2/public_html/sitios/hp/websocket_server_app_save_pic_to_server/inc/savePNG.php on line 3
+[12-May-2015 17:22:21 America/Denver] PHP Warning:  file_put_contents(): Filename cannot be empty in /home3/humande2/public_html/sitios/hp/websocket_server_app_save_pic_to_server/inc/savePNG.php on line 12

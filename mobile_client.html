@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <title>#ROMPELASREGLAS MOBILE</title>
+
+    <style>
+        @font-face {
+            font-family: 'HPSimplified';
+            src: url('fonts/HPSimplified-Regular.ttf');
+        }
+        
+        * {
+            font-family: HPSimplified;
+            font-size: 12px;
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        body {
+            min-height: 480px;
+            min-width: 360px;
+            margin: 0px;
+            padding: 0px;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+        
+        #postAdButton {
+            width: 120px;
+            height: 50px;
+            background-color: red;
+            margin-top: 40px;
+            border-radius: 0 6px 0 6px;
+            bottom: 5px;
+            left: 8px;
+            position: absolute;
+        }
+        
+        #postAdButton h1 {
+            font-size: 24px;
+            padding-top: 10px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        h3 {
+            font-size: 18px;
+        }
+        
+        p {
+            line-height: 18px;
+        }
+        
+        #wrap {
+            min-width: 320px;
+            max-width: 360px;
+            max-height: 520px;
+            min-height: 480px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: absolute;
+        }
+        
+        #content {
+            padding: 5px;
+            background: #ddd;
+            border-radius: 5px;
+            overflow-y: scroll;
+            border: 1px solid #CCC;
+            margin-top: 10px;
+            height: 160px;
+        }
+        
+        #input {
+            border-radius: 2px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            padding: 5px;
+            width: 400px;
+        }
+        
+        #status {
+            width: 350px;
+            display: block;
+            margin-top: 15px;
+        }
+        
+        #status img {
+            float: left;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        
+        #status p {
+            float: left;
+        }
+        
+        #status h3 {
+            font-size: 14px;
+        }
+        
+        #char-thumbs {
+            width: 305px;
+            height: 155px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        
+        #char-thumbs ul li {
+            float: left;
+            list-style-type: none;
+            margin: 2px;
+            width: 72px;
+            height: 72px;
+        }
+        
+        #char-thumbs ul li img {
+            padding: 0;
+            margin: 0;
+            width: 72px;
+            height: 72px;
+        }
+        
+        #color-thumbs {
+            width: 308px;
+            margin: 0 auto;
+            margin-top: 10px;
+            height: 165px;
+        }
+        
+        #color-thumbs ul li {
+            float: left;
+            list-style-type: none;
+            padding: 0;
+            margin: 1px;
+        }
+        
+        #color1,
+        #color2,
+        #color3,
+        #color4,
+        #color5,
+        #color6 {
+            width: 98px;
+            height: 78px;
+            float: left;
+            list-style-type: none;
+            margin: 0 1px 1px 0;
+            border: 1px solid white;
+        }
+        
+        #color1 {
+            background-color: #b0a9db;
+        }
+        
+        #color2 {
+            background-color: #ffcf66;
+        }
+        
+        #color3 {
+            background-color: #94dce1;
+        }
+        
+        #color4 {
+            background-color: #a3d6a1;
+        }
+        
+        #color5 {
+            background-color: #fccfdc;
+        }
+        
+        #color6 {
+            background-color: #ffffff;
+            border: 1px solid #bbb;
+            width: 98px;
+            height: 77px;
+        }
+        
+        #thankyou {
+            display: none;
+            width: 340px;
+            height: 480px;
+            position: absolute;
+            margin: 0px;
+            padding: 0px;
+            top: 960px;
+            left: 0;
+        }
+        
+        #thankyou #meghan {
+            display: block;
+            width: 340px;
+            height: 480px;
+            margin: 0px;
+            padding: 0px;
+            position: absolute;
+        }
+        
+        #thankyou #btr {
+            display: block;
+            top: 400px;
+            left: 10px;
+            margin: 0px;
+            padding: 0px;
+            position: absolute;
+            z-index: 2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="thankyou">
+        <img id="btr" src="img/rompelasreglasThanks.jpg" />
+        <img id="meghan" src="img/meghan.jpg" />
+    </div>
+    <div id="wrap">
+
+        <div id="accountInfo"></div>
+        
+        <div id="fb-root">
+            <div id="status">Connecting...</div>
+        </div>
+        
+        <div id="char-thumbs">
+            <ul>
+                <li id="thmb1"><img src="img/thumbs/char8Thumb.jpg" /></li>
+                <li id="thmb2"><img src="img/thumbs/char2Thumb.jpg" /></li>
+                <li id="thmb3"><img src="img/thumbs/char3Thumb.jpg" /></li>
+                <li id="thmb4"><img src="img/thumbs/char4Thumb.jpg" /></li>
+                <li id="thmb5"><img src="img/thumbs/char6Thumb.jpg" /></li>
+                <li id="thmb6"><img src="img/thumbs/char5Thumb.jpg" /></li>
+                <li id="thmb7"><img src="img/thumbs/char7Thumb.jpg" /></li>
+                <li id="thmb8"><img src="img/thumbs/char1Thumb.jpg" /></li>
+            </ul>
+        </div>
+
+        <div id="color-thumbs">
+            <ul>
+                <li id="color1"></li>
+                <li id="color2"></li>
+                <li id="color3"></li>
+                <li id="color4"></li>
+                <li id="color6"></li>
+                <li id="color5"></li>
+
+            </ul>
+            <div id='fileNames'> </div>
+        </div>
+
+
+
+        <!--             <input type="text" id="input" disabled="disabled" /> -->
+
+
+        <!--             <div id="status"></div> -->
+
+        <!--             <div id="content"></div> -->
+        <div id="postAdButton">
+            <h1>Hack It!</h1></div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script src="//cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js"></script>
+    <script src="mobile_client.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

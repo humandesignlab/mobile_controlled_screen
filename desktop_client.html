@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>#ROMPELASREGLAS BILBOARD</title>
+
+
+
+    <style>
+        @font-face {
+            font-family: 'HPSimplified';            
+            src: url('fonts/HPSimplified-Regular.ttf');
+        }
+        
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        * {
+            font-family: HPSimplified;
+            font-size: 48px;
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        p {
+            line-height: 48px;
+        }
+
+        #bg {
+            padding: 5px;
+            background: #a3d6a1;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #CCC;
+            margin: 0;
+            height: 900px;
+            width: 1680px;
+            position: absolute;
+            opacity: 0;
+        }
+        
+        #welcome-screen {
+            display: block;
+            padding: 5px;
+            background: #0096d6;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #CCC;
+            margin: 0;
+            height: 900px;
+            width: 1680px;
+            position: absolute;
+        }
+        
+        #content {
+            padding: 5px;
+            background: #555;
+            border-radius: 5px;
+            overflow-y: scroll;
+            border: 1px solid #CCC;
+            margin-top: 10px;
+            height: 60px;
+        }
+        /*
+        #bendtherules {
+	        background:#fff;
+	        height: 60px;
+	        width:600px;
+	        left:-700px;
+	        top:125px;
+	        position: absolute;
+	    }
+*/
+        
+        #bendtherules-pre {
+            width: 800px;
+            height: 86px;
+            top: 150px;
+            left: -900px;
+            position: absolute;
+            font-size: 96px;
+            background: #fff;
+            padding: 0 3px 0 3px;
+            margin: 0;
+            line-height: 0.9;
+            text-transform: uppercase;
+        }
+        
+        #logo-windows-pre {
+	        top: 30px;
+            left: -900px;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+
+        }
+        
+        #logo-windows {
+	        top: 30px;
+            left: -900px;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+
+        }
+        
+        #logo-windows-pre img {
+	        width: 90%;
+	        height: 90%;
+        }
+        
+        #logo-windows img {
+	        width: 90%;
+	        height: 90%;
+        }
+        
+        #logo-hp-white,
+        #logo-hp-blue {
+            left: 1700px;
+            top: 30px;
+            position: absolute;
+        }
+        
+        #logo-hp-white-pre {
+            left: 1700px;
+            top: 30px;
+            position: absolute;
+        }
+        
+        #copy-pre {
+            width: 1030px;
+            top: 250px;
+            left: -950px;
+            position: absolute;
+            color: #fff;
+            z-index: 3;
+        }
+        
+        #copy-pre p:nth-child(2) {
+	        top: 360px;
+	        position: relative;
+	        font-size: 36px;
+	        line-height: 36px;
+        }
+        
+        #copy {
+            width: 1030px;
+            top: 330px;
+            left: -900px;
+            position: absolute;
+            color: #000;
+        }
+        
+        #character {
+            top: 120px;
+            left: 110%;
+            position: absolute;
+            width: 600px;
+        }
+        
+        #my-name {
+            top: 115px;
+			left: -700px;
+			position: absolute;
+			font-size: 96px;        
+			
+		}
+        
+        #bendtherules {
+            width: 800px;
+            height: 86px;
+            position: absolute;
+            top: 230px;
+            left: -900px;
+            background: transparent;
+        }
+        
+        #bendtherules h1 {
+            font-size: 96px;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            font-weight: normal;
+            line-height: 0.9;
+            background-color: #fff;
+        }
+        
+        #sprite-container {
+            left: -40px;
+            top: 280px;
+            position: relative;
+        }
+        
+        .spriteslider {
+            /*              padding: 60px;    
+*/
+            
+            width: 680px;
+            /*              background: #FCFEFC;
+              border-radius: 5px;*/
+        }
+        
+        #spritetarget {
+            width: 730px;
+            height: 600px;
+            background-image: url("img/compuFrenteAlpha.png");
+            /* horizontal spritesheet - image from http://preloaders.net */
+            
+            background-repeat: no-repeat;
+        }
+        
+        #qrcode {
+            left: 55px;
+            top: 420px;
+            position: absolute;
+        }
+        
+        #the-video {
+            top: 150px;
+            left: 840px;
+            position: absolute;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="welcome-screen">
+        <div id="logo-hp-white-pre"><img src="img/logo-HP-white.png"></div>
+        <div id="logo-windows-pre">
+	        <img src="img/logoWindowsPre.png">
+        </div>
+        <div id="bendtherules-pre">#ROMPELASREGLAS
+            <!-- <img src="img/rompelasreglasPleca.png"/> -->
+        </div>
+        
+        <div id="copy-pre">
+            <p>Con la HP Pavilion x360 con Windows 8.1</br> y participa para ganar un viaje a un reconocido festival de música en Chicago.</p>
+            <p> Escanéa el código</br> para romper las reglas</br> de este anuncio.</p>
+        </div>
+        <div id="qrcode"></div>
+        <div id="the-video">
+            <video preload="auto" autoplay loop>
+                <source src="video/output.webm" type="video/webm">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div id="bg">
+        <div id="character"></div>
+        <div id="fb-root"></div>
+        <div id="my-name"></div>
+        <!--             <div id="content"></div>
+ -->
+        <div id="logo-hp-white"><img src="img/logo-HP-white.png"></div>
+        <div id="logo-hp-blue"><img src="img/logo-HP-blue.png"></div>
+        <div id="logo-windows">
+	        <img src="img/logoWindowsPre.png">
+        </div>
+        <div id="bendtherules">
+            <h1>#ROMPELASREGLAS</h1>
+            <!-- <img src="img/rompelasreglasPleca.png"/> --></div>
+        <div id="copy">
+            <p>Con la HP Pavilion x360 con Windows 8.1
+                <!-- <br> participa para ganar un viaje a un reconocido festival de música en Chicago. -->
+            </p>
+        </div>
+        <div id="sprite-container">
+            <!-- <div class='spriteslider' id='spriteslider'> -->
+            <div id='spritetarget'></div>
+            <!-- </div> -->
+        </div>
+
+
+
+
+
+        <!--              <canvas id="canvas"></canvas>
+ -->
+
+        <!-- <div>
+                <span id="status">Connecting...</span>
+                <input type="text" id="input" disabled="disabled" /> 
+            </div> -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/utils/Draggable.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="desktop_client.js"></script>
+        <script src="html2canvas0.4.1.js"></script>
+        <script src="qrcode.js"></script>
+    </div>
+    <script type="text/javascript">
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+//             text: "http://humandesignlab.com/sitios/hp/websocket_server_app_save_pic_to_server/mobile_client.html",
+            text: "http://bit.do/hprlr",
+            width: 300,
+            height: 300,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+        // use a dummy element as the target since we don't really need anything visual to drag around
+        var spriteslider = document.createElement('div');
+        // the dummy element needs to be added to the DOM in latest Draggable
+
+        document.body.appendChild(spriteslider);
+        //spriteslider.style.left = '100px';
+        //spriteslider.style.position = 'relative';
+
+        // attach all vars to the dummy element so globals aren't needed:
+        // element that initiates dragging
+        spriteslider.slider = document.getElementById('spriteslider');
+        // element with the sprite sheet to control
+        spriteslider.sprite = document.getElementById('spritetarget');
+        // size of each sprite frame
+        spriteslider.spritesize = 635;
+        // number of sprite frames - used to keep multiplier in a reasonable range
+        spriteslider.spritecount = 10;
+        // pixels to drag per sprite update
+        spriteslider.pixelsperincrement = 20;
+        // values used by the sprite changer
+        spriteslider.multiplier = spriteslider.lastmultiplier = 0;
+
+
+        // create the 360 degree slider
+        Draggable.create(spriteslider, {
+            type: 'x',
+            trigger: spriteslider.slider,
+            // reset the targets position after drag ends, so onDrag doesn't need to deal with an offset
+            bounds: {
+                minX: 0,
+                maxX: 0,
+                minY: 0,
+                maxY: 0
+            },
+            // don't need to slow down as you drag further away
+            edgeResistance: 5,
+            cursor: 'e-resize',
+            onDrag: function() {
+                // there is an extra drag event fired on mouse up that has x = 0, so check this.isDragging to skip that last one
+                if (this.isDragging) {
+                    var t = this.target; // the dummy div
+                    t.multiplier = Math.floor(this.x / t.pixelsperincrement) + t.lastmultiplier;
+                    TweenLite.set(t.sprite, {
+                        backgroundPosition: (-t.multiplier * t.spritesize) + "px 0"
+                    });
+                }
+            },
+            onDragEnd: function() {
+                // saves the current multiplier, and keeps multiplier small so that backgroundPosition doesn't end up too large for the browser to render
+                var t = this.target; // the dummy div
+                t.lastmultiplier = t.multiplier % t.spritecount;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
